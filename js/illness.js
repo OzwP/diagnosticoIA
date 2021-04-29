@@ -88,7 +88,7 @@ Si los síntomas no desaparecen con el tratamiento, puede llegar a ser necesario
 }
 
 const E11 = {
-    name: `Cardiopatía congénita`,
+    name: `Apnea del Sueño`,
     source: `La apnea del sueño es la interrupción de la respiración que se produce momentos después de conciliar el sueño y precedida de un ronquido fuerte durante al menos 10 segundos. Si este proceso se repite 5 veces por cada hora de sueño nos encontraremos ante el Síndrome de Apnea Obstructiva del Sueño. 
 La obstrucción de la respiración provoca un descenso de los niveles de oxígeno en el organismo, que dificulta que la persona tenga un sueño reparador y se muestre con signos de cansancio a la mañana siguiente. `,
     recommendations: `El especialista determinará el tratamiento en cada caso. Se pueden utilizar algunos dispositivos dentales como tratamiento para los casos leves de apnea obstructiva del sueño. Estos dispositivos facilitan la respiración, al mover la mandíbula hacia adelante.  
