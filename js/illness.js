@@ -101,7 +101,7 @@ En casos menos frecuentes, se puede precisar la realización de una cirugía par
 
 
 
-const ILLNESS_ARRAY = [E1, E2, E3, E4, E5, E6, E7, E8, E9, E10];
+const ILLNESS_ARRAY = [E1, E2, E3, E4, E5, E6, E7, E8, E9, E10, E11];
 const UMBRAL = 0.3;
 
 // MÉTODOS MAX-MIN PARA OBTENER LOS RESULTADOS
@@ -110,7 +110,7 @@ function specificDiagnosis(data, uillness) {
     let answer = {};
 
     for (let i = 0; i < uillness.length; i++) {
-        for (let j = 0; j < 15; j++) {
+        for (let j = 0; j < 18; j++) {
             const pos = parseInt(uillness[i]) - 1;
             aux[j] = Math.min(data[j], ILLNESS_ARRAY[pos].symptoms[j]);
         }
@@ -145,13 +145,13 @@ function generalDiagnosis(data){
     let answer = {};
 
     ILLNESS_ARRAY.map((illness) => {
-        for(let i = 0; i < 15; i++) aux[i] = Math.min(data[i], illness.symptoms[i]);
+        for(let i = 0; i < 18; i++) aux[i] = Math.min(data[i], illness.symptoms[i]);
         res[j] = aux;
         aux = [];
         j++;
     });
 
-    for(let i = 0; i < 10; i++) res[i] = parseFloat(res[i].reduce((a, b) => a + b, 0));
+    for(let i = 0; i < 11; i++) res[i] = parseFloat(res[i].reduce((a, b) => a + b, 0));
 
     let i = res.indexOf(Math.max.apply(Math, res));
 
@@ -167,7 +167,7 @@ function generalDiagnosis(data){
         return answer
     }
 
-    for(let k = 0; k < 10; k++) if(res[k] === res[i]) illnessArray.push(k);
+    for(let k = 0; k < 11; k++) if(res[k] === res[i]) illnessArray.push(k);
 
     illnessArray.map((idx) => {
         answer[`illness${count}`] = ILLNESS_ARRAY[idx];

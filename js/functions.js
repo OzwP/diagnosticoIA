@@ -82,7 +82,7 @@ if(localStorage.getItem('flag') === 'true'){
 function getNextQuestion(){
     count++;
 
-    if(count > 15) {
+    if(count > 18) {
         count--;
         return
     }
@@ -97,7 +97,7 @@ function getNextQuestion(){
     let nextQuestion = document.getElementById(`pregunta${count}`);
     nextQuestion.style.display = 'block';
     getSelectedValue(count - 1);
-    if(count === 15){
+    if(count === 18){
         getSelectedValue(count);
         let nextButton = document.getElementById('next');
         nextButton.innerText = '';
@@ -126,7 +126,7 @@ function getPreviousQuestion(){
 
 function fillProgress(counter){
     progess.innerText = '';
-    progess.innerText += `Pregunta ${counter} de 15`;
+    progess.innerText += `Pregunta ${counter} de 18`;
 }
 
 function getSelectedValue(counter){
@@ -141,7 +141,7 @@ function getSelectedValue(counter){
 function getUsersAnswers() {
     symptoms = [];
 
-    for(let i = 1; i < 16; i++) symptoms.push(parseFloat(localStorage.getItem(`p${i}`)))
+    for(let i = 1; i < 19; i++) symptoms.push(parseFloat(localStorage.getItem(`p${i}`)))
 
     return symptoms;
 }
@@ -173,3 +173,4 @@ function noBack(){
         history.go(1);
     }
 }
+
