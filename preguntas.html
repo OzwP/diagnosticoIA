@@ -34,7 +34,7 @@
 	<!-- Contenido -->
 	<div class="contenedor">
 		<h1 id="tipoCuestionario">Diagnóstico general</h1>
-		<h4 id="progreso">Pregunta 1 de 15</h4>
+		<h4 id="progreso">Pregunta 1 de 18</h4>
 		<div id="pregunta1">
 			<!-- <h6>Seleccione al menos dos respuestas</h6> -->
 			<h3>¿Ha presentado tos en los últimos días?</h3>
@@ -44,9 +44,13 @@
 						<input type="radio" id="r1" name="p1" value="0" checked>
 						<label for="r1">No</label>
 					</li>
+					<li id="l1h">
+						<input type="radio" id="h1" value="0.8" name="p4" checked>
+						<label for="h1">Tos</label>
+					</li>
 					<li>
-						<input type="radio" id="r2" value="0.3" name="p1">
-						<label for="r2">Si (especificar onclick)</label>
+						<input type="radio" id="r2" name="p1">
+						<label for="r2">Tos seca (onclick)</label>
 					</li>
 				</ul>
 			</div>
@@ -61,11 +65,11 @@
 						<label for="r3">No</label>
 					</li>
 					<li>
-						<input type="radio" id="r4" value="0.4" name="p2">
+						<input type="radio" id="r4" value="0.6" name="p2">
 						<label for="r4">Moderado</label>
 					</li>
 					<li>
-						<input type="radio" id="r5" value="0.6" name="p2">
+						<input type="radio" id="r5" value="0.8" name="p2">
 						<label for="r5">Si</label>
 					</li>					
 				</ul>
@@ -81,11 +85,11 @@
 						<label for="r6">No</label>
 					</li>
 					<li>
-						<input type="radio" id="r7" value="0.2" name="p3">
+						<input type="radio" id="r7" value="0.6" name="p3">
 						<label for="r7">Moderado</label>
 					</li>
 					<li>
-						<input type="radio" id="r8" value="0.4" name="p3">
+						<input type="radio" id="r8" value="1" name="p3">
 						<label for="r8">Mucho</label>
 					</li>					
 				</ul>
@@ -93,7 +97,7 @@
 		</div>
 		<div id="pregunta4" style="display: none;">
 			<!-- <h6>Seleccione al menos dos respuestas</h6> -->
-			<h3>¿Ha presentado fiebre?</h3>
+			<h3>¿Ha presentado fiebre? PENDIENTE</h3>
 			<div class="res">
 				<ul class="lista">
 					<li>
@@ -101,16 +105,8 @@
 						<label for="r9">No</label>
 					</li>
 					<li>
-						<input type="radio" id="r10" value="0.3" name="p4">
+						<input type="radio" id="r10" name="p4">
 						<label for="r10">Si (especificar onclick)</label>
-					</li>
-					<li id="l1h">
-						<input type="radio" id="h1" value="0" name="p4" checked>
-						<label for="h1">Tos con flemas</label>
-					</li>
-					<li id="l2h">
-						<input type="radio" id="h2" value="0.3" name="p4">
-						<label for="h2">Tos seca</label>
 					</li>				
 				</ul>
 			</div>
@@ -129,7 +125,7 @@
 						<label for="r12">Mas o menos</label>
 					</li>
 					<li>
-						<input type="radio" id="r13" value="0.5" name="p5">
+						<input type="radio" id="r13" value="0.8" name="p5">
 						<label for="r13">Si</label>
 					</li>				
 				</ul>
@@ -145,11 +141,11 @@
 						<label for="r14">No</label>
 					</li>
 					<li>
-						<input type="radio" id="r15" value="0.5" name="p6">
+						<input type="radio" id="r15" value="0.6" name="p6">
 						<label for="r15">Moderado</label>
 					</li>
 					<li>
-						<input type="radio" id="r16" value="0.5" name="p6">
+						<input type="radio" id="r16" value="1" name="p6">
 						<label for="r16">Si</label>
 					</li>			
 				</ul>
@@ -157,252 +153,228 @@
 		</div>
 		<div id="pregunta7" style="display: none;">
 			<!-- <h6>Seleccione al menos dos respuestas</h6> -->
-			<h3>¿Qué tan frecuentemente ha presentado pérdida de conocimiento?</h3>
+			<h3>¿Ha presentado dolor en la espalda, pecho y/o abdomen? </h3>
 			<div class="res">
 				<ul class="lista">
 					<li>
 						<input type="radio" id="r21" value="0" name="p7" checked>
-						<label for="r21">Nunca</label>
+						<label for="r21">No</label>
 					</li>
 					<li>
-						<input type="radio" id="r22" value="0.2" name="p7">
-						<label for="r22">A veces</label>
+						<input type="radio" id="r22" value="0.3" name="p7">
+						<label for="r22">Leve</label>
 					</li>
 					<li>
-						<input type="radio" id="r23" value="0.4" name="p7">
-						<label for="r23">Frecuentemente</label>
+						<input type="radio" id="r231" value="0.6" name="p7">
+						<label for="r231">Moderado</label>
+					</li>
+					<li>
+						<input type="radio" id="r23" value="0.8" name="p7">
+						<label for="r23">Intenso</label>
 					</li>					
 				</ul>
 			</div>
 		</div>
 		<div id="pregunta8" style="display: none;">
 			<!-- <h6>Seleccione al menos dos respuestas</h6> -->
-			<h3>¿Qué tan comunmente presenta fatiga? (cansancio prolongado)</h3>
+			<h3>¿Ha presentado debilidad o fatiga? </h3>
 			<div class="res">
 				<ul class="lista">
 					<li>
 						<input type="radio" id="r24" value="0" name="p8" checked>
-						<label for="r24">Nunca</label>
+						<label for="r24">No</label>
 					</li>
 					<li>
-						<input type="radio" id="r25" value="0.3" name="p8">
+						<input type="radio" id="r25" value="0.5" name="p8">
 						<label for="r25">A veces</label>
 					</li>
 					<li>
-						<input type="radio" id="r26" value="0.6" name="p8">
-						<label for="r26">Frecuentemente</label>
+						<input type="radio" id="r26" value="1" name="p8">
+						<label for="r26">Todo el tiempo</label>
 					</li>					
 				</ul>
 			</div>
 		</div>
 		<div id="pregunta9" style="display: none;">
 			<!-- <h6>Seleccione al menos dos respuestas</h6> -->
-			<h3>¿Presenta desmayos?</h3>
+			<h3>¿Ha presentado escalofríos? </h3>
 			<div class="res">
 				<ul class="lista">
 					<li>
 						<input type="radio" id="r27" value="0" name="p9" checked>
-						<label for="r27">Nunca</label>
+						<label for="r27">No</label>
 					</li>
 					<li>
-						<input type="radio" id="r28" value="0.4" name="p9">
-						<label for="r28">A veces</label>
-					</li>
-					<li>
-						<input type="radio" id="r29" value="0.7" name="p9">
-						<label for="r29">Frecuentemente</label>
+						<input type="radio" id="r29" value="1" name="p9">
+						<label for="r29">Sí</label>
 					</li>					
 				</ul>
 			</div>
 		</div>
 		<div id="pregunta10" style="display: none;">
 			<!-- <h6>Seleccione al menos dos respuestas</h6> -->
-			<h3>¿Qué tan frecuentemente presenta cansancio? (falta de fuerzas que no se prolonga por mucho tiempo)</h3>
+			<h3>¿Ha disminuido su sentido del gusto y/o del olfato? </h3>
 			<div class="res">
 				<ul class="lista">
 					<li>
 						<input type="radio" id="r30" value="0" name="p10" checked>
-						<label for="r30">Nunca</label>
+						<label for="r30">No</label>
 					</li>
 					<li>
-						<input type="radio" id="r31" value="0.4" name="p10">
-						<label for="r31">A veces</label>
-					</li>
-					<li>
-						<input type="radio" id="r32" value="0.7" name="p10">
-						<label for="r32">Frecuentemente</label>
+						<input type="radio" id="r32" value="1" name="p10">
+						<label for="r32">Sí</label>
 					</li>					
 				</ul>
 			</div>
 		</div>
 		<div id="pregunta11" style="display: none;">
 			<!-- <h6>Seleccione al menos dos respuestas</h6> -->
-			<h3>¿Presenta tos con sangre?</h3>
+			<h3>¿Se ha percatado de un tono blanco o amarillo en su lengua? </h3>
 			<div class="res">
 				<ul class="lista">
 					<li>
 						<input type="radio" id="r33" value="0" name="p11" checked>
-						<label for="r33">Nunca</label>
+						<label for="r33">No</label>
 					</li>
 					<li>
-						<input type="radio" id="r34" value="0.2" name="p11">
-						<label for="r34">A veces</label>
+						<input type="radio" id="r34" value="0.5" name="p11">
+						<label for="r34">Mas o menos</label>
 					</li>
 					<li>
-						<input type="radio" id="r35" value="0.4" name="p11">
-						<label for="r35">Frecuentemente</label>
+						<input type="radio" id="r35" value="1" name="p11">
+						<label for="r35">Sí</label>
 					</li>					
 				</ul>
 			</div>
 		</div>
 		<div id="pregunta12" style="display: none;">
 			<!-- <h6>Seleccione al menos dos respuestas</h6> -->
-			<h3>¿Qué tan frecuente presenta aturdimiento?</h3>
+			<h3>¿Ha despertado a mitad de la noche porque no puede respirar? </h3>
 			<div class="res">
 				<ul class="lista">
 					<li>
 						<input type="radio" id="r36" value="0" name="p12" checked>
-						<label for="r36">Nunca</label>
+						<label for="r36">No</label>
 					</li>
 					<li>
-						<input type="radio" id="r37"  value="0.3" name="p12">
+						<input type="radio" id="r37"  value="0.5" name="p12">
 						<label for="r37">A veces</label>
 					</li>
 					<li>
-						<input type="radio" id="r38" value="0.6" name="p12">
-						<label for="r38">Frecuentemente</label>
+						<input type="radio" id="r38" value="1" name="p12">
+						<label for="r38">Sí</label>
 					</li>					
 				</ul>
 			</div>
 		</div>
 		<div id="pregunta13" style="display: none;">
-			<!-- <h6>Seleccione al menos dos respuestas</h6> -->
-			<h3>¿Ha presentado vómito frecuente?</h3>
-			<div class="res">
-				<ul class="lista">
-					<li>
-						<input type="radio" id="r39" value="0" name="p13" checked>
-						<label for="r39">No</label>
-					</li>
-					<li>
-						<input type="radio" id="r40" value="0.5" name="p13">
-						<label for="r40">Sí</label>
-					</li>				
-				</ul>
-			</div>
-		</div>
-		<div id="pregunta14" style="display: none;">
-			<!-- <h6>Seleccione al menos dos respuestas</h6> -->
-			<h3>¿Qué tan frecuentemente se siente débil?</h3>
-			<div class="res">
-				<ul class="lista">
-					<li>
-						<input type="radio" id="r41" value="0" name="p14" checked>
-						<label for="r41">Nunca</label>
-					</li>
-					<li>
-						<input type="radio" id="r42" value="0.2" name="p14">
-						<label for="r42">A veces</label>
-					</li>
-					<li>
-						<input type="radio" id="r43" value="0.4" name="p14">
-						<label for="r43">Frecuentemente</label>
-					</li>					
-				</ul>
-			</div>
-		</div>
-		<div id="pregunta15" style="display: none;">
-			<!-- <h6>Seleccione al menos dos respuestas</h6> -->
-			<h3>¿Presenta dolor del lado izquierdo del cuerpo?</h3>
-			<div class="res">
-				<ul class="lista">
-					<li>
-						<input type="radio" id="r44" value="0" name="p15" checked>
-						<label for="r44">No presento dolor</label>
-					</li>
-					<li>
-						<input type="radio" id="r45" value="0.3" name="p15">
-						<label for="r45">Presento un poco de dolor</label>
-					</li>
-					<li>
-						<input type="radio" id="r46" value="0.6" name="p15">
-						<label for="r46">Presento dolor moderado</label>
-					</li>
-					<li>
-						<input type="radio" id="r47" value="0.9" name="p15">
-						<label for="r47">Presento mucho dolor</label>
-					</li>					
-				</ul>
-			</div>
-		</div>
+            <!-- <h6>Seleccione al menos dos respuestas</h6> -->
+            <h3>¿Ha presentado dolor de cabeza? </h3>
+            <div class="res">
+                <ul class="lista">
+                    <li>
+                        <input type="radio" id="r39" value="0" name="p13" checked>
+                        <label for="r39">No</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="r40" value="0.2" name="p13" checked>
+                        <label for="r40">Leve</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="r41" value="0.5" name="p13" checked>
+                        <label for="r41">Moderado</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="r42" value="0.8" name="p13" checked>
+                        <label for="r42">Intenso</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="r43" value="1" name="p13">
+                        <label for="r43">Insoportale</label>
+                    </li>               
+                </ul>
+            </div>
+        </div>
+        <div id="pregunta14" style="display: none;">
+            <!-- <h6>Seleccione al menos dos respuestas</h6> -->
+            <h3>¿ ¿Ha presentado dolor de garganta?</h3>
+            <div class="res">
+                <ul class="lista">
+                    <li>
+                        <input type="radio" id="r44" value="0" name="p14" checked>
+                        <label for="r44">No</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="r45" value="0.5" name="p14">
+                        <label for="r45">Moderado</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="r46" value="1" name="p14">
+                        <label for="r46">Intenso</label>
+                    </li>                   
+                </ul>
+            </div>
+        </div>
+        <div id="pregunta15" style="display: none;">
+            <!-- <h6>Seleccione al menos dos respuestas</h6> -->
+            <h3>¿Ha presentado congestión nasal? </h3>
+            <div class="res">
+                <ul class="lista">
+                    <li>
+                        <input type="radio" id="r47" value="0" name="p15" checked>
+                        <label for="r47">No</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="r48" value="1" name="p15">
+                        <label for="r48">Sí</label>
+                    </li>                   
+                </ul>
+            </div>
+        </div>
 		<div id="pregunta16" style="display: none;">
 			<!-- <h6>Seleccione al menos dos respuestas</h6> -->
-			<h3>¿Presenta dolor del lado izquierdo del cuerpo?</h3>
+			<h3>¿Se ha sentido desorientado últimamente? </h3>
 			<div class="res">
 				<ul class="lista">
 					<li>
-						<input type="radio" id="r44" value="0" name="p15" checked>
-						<label for="r44">No presento dolor</label>
+						<input type="radio" id="r49" value="0" name="p16" checked>
+						<label for="r49">No</label>
 					</li>
 					<li>
-						<input type="radio" id="r45" value="0.3" name="p15">
-						<label for="r45">Presento un poco de dolor</label>
-					</li>
-					<li>
-						<input type="radio" id="r46" value="0.6" name="p15">
-						<label for="r46">Presento dolor moderado</label>
-					</li>
-					<li>
-						<input type="radio" id="r47" value="0.9" name="p15">
-						<label for="r47">Presento mucho dolor</label>
+						<input type="radio" id="r50" value="0.5" name="p16">
+						<label for="r50">Sí</label>
 					</li>					
 				</ul>
 			</div>
 		</div>
 		<div id="pregunta17" style="display: none;">
 			<!-- <h6>Seleccione al menos dos respuestas</h6> -->
-			<h3>¿Presenta dolor del lado izquierdo del cuerpo?</h3>
+			<h3>¿Ha presentado nauseas, vómito o diarrea? </h3>
 			<div class="res">
 				<ul class="lista">
 					<li>
-						<input type="radio" id="r44" value="0" name="p15" checked>
-						<label for="r44">No presento dolor</label>
+						<input type="radio" id="r51" value="0" name="p17" checked>
+						<label for="r51">No</label>
 					</li>
 					<li>
-						<input type="radio" id="r45" value="0.3" name="p15">
-						<label for="r45">Presento un poco de dolor</label>
-					</li>
-					<li>
-						<input type="radio" id="r46" value="0.6" name="p15">
-						<label for="r46">Presento dolor moderado</label>
-					</li>
-					<li>
-						<input type="radio" id="r47" value="0.9" name="p15">
-						<label for="r47">Presento mucho dolor</label>
-					</li>					
+						<input type="radio" id="r52" value="0.5" name="p17">
+						<label for="r52">Sí</label>
+					</li>				
 				</ul>
 			</div>
 		</div>
 		<div id="pregunta18" style="display: none;">
 			<!-- <h6>Seleccione al menos dos respuestas</h6> -->
-			<h3>¿Presenta dolor del lado izquierdo del cuerpo?</h3>
+			<h3>¿Ha sentido molestia o inflamación en el cuello?</h3>
 			<div class="res">
 				<ul class="lista">
 					<li>
-						<input type="radio" id="r44" value="0" name="p15" checked>
-						<label for="r44">No presento dolor</label>
+						<input type="radio" id="r53" value="0" name="p18" checked>
+						<label for="r53">No</label>
 					</li>
 					<li>
-						<input type="radio" id="r45" value="0.3" name="p15">
-						<label for="r45">Presento un poco de dolor</label>
-					</li>
-					<li>
-						<input type="radio" id="r46" value="0.6" name="p15">
-						<label for="r46">Presento dolor moderado</label>
-					</li>
-					<li>
-						<input type="radio" id="r47" value="0.9" name="p15">
-						<label for="r47">Presento mucho dolor</label>
+						<input type="radio" id="r54" value="1" name="p18">
+						<label for="r54">Sí</label>
 					</li>					
 				</ul>
 			</div>
@@ -414,5 +386,4 @@
 	<script src="./js/illness.js"></script>
 	<script src="./js/functions.js"></script>
 </body>
-
 </html>
