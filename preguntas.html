@@ -5,16 +5,15 @@
 	<meta charset="UTF-8">
 	<title>Preguntas</title>
 	<link rel="stylesheet" href="./css/preguntas.css">
-	<link href="./assets/heart.png" rel="icon">
 </head>
 
-<body onload="noBack();">
+<body style="background-image: url('assets/iStock-Who_I_am.jpg');" onload="noBack();">
 	<!-- Navbar -->
 	<header class="nav">
 		<input type="checkbox" id="nav-check">
 		<div class="nav-header">
 			<div class="nav-title">
-				Diagnóstico de enfermedades cardiovasculares aplicando Lógica Difusa
+				Diagnóstico de enfermedades respiratorias aplicando Lógica Difusa
 			</div>
 		</div>
 		<div class="nav-btn">
@@ -40,17 +39,25 @@
 			<h3>¿Ha presentado tos en los últimos días?</h3>
 			<div class="res">
 				<ul class="lista">
-					<li>
-						<input type="radio" id="r1" name="p1" value="0" checked>
+					<li id="h1">
+						<input onclick="showHidden(2)" type="radio" id="r1" name="p1" value="0" checked>
 						<label for="r1">No</label>
 					</li>
-					<li id="l1h">
-						<input type="radio" id="h1" value="0.8" name="p4" checked>
-						<label for="h1">Tos</label>
+					<li id="h2">
+						<input type="radio" id="r2" value="0.8" name="p1">
+						<label for="r2">Tos</label>
 					</li>
-					<li>
-						<input type="radio" id="r2" name="p1">
-						<label for="r2">Tos seca (onclick)</label>
+					<li id="h3">
+						<input type="radio" id="r3" name="p1" onclick="showHidden(1)">
+						<label for="r3">Tos seca</label>
+					</li>
+					<li id="h4" hidden>
+						<input name="p1" value="0.5" type="radio"  id="hi1">
+						<label for="hi1">Moderada</label>
+					</li>
+					<li id="h5" hidden>
+						<input name="p1" value="1" type="radio"  id="hi2">
+						<label for="hi2">Intensa</label>
 					</li>
 				</ul>
 			</div>
@@ -61,16 +68,16 @@
 			<div class="res">
 				<ul class="lista">
 					<li>
-						<input type="radio" id="r3" value="0" name="p2" checked>
-						<label for="r3">No</label>
+						<input type="radio" id="r4" value="0" name="p2" checked>
+						<label for="r4">No</label>
 					</li>
 					<li>
-						<input type="radio" id="r4" value="0.6" name="p2">
-						<label for="r4">Moderado</label>
+						<input type="radio" id="r5" value="0.6" name="p2">
+						<label for="r5">Moderado</label>
 					</li>
 					<li>
-						<input type="radio" id="r5" value="0.8" name="p2">
-						<label for="r5">Si</label>
+						<input type="radio" id="r6" value="0.8" name="p2">
+						<label for="r6">Si</label>
 					</li>					
 				</ul>
 			</div>
@@ -81,33 +88,39 @@
 			<div class="res">
 				<ul class="lista">
 					<li>
-						<input type="radio" id="r6" value="0" name="p3" checked>
-						<label for="r6">No</label>
+						<input type="radio" id="r7" value="0" name="p3" checked>
+						<label for="r7">No</label>
 					</li>
 					<li>
-						<input type="radio" id="r7" value="0.6" name="p3">
-						<label for="r7">Moderado</label>
+						<input type="radio" id="r8" value="0.6" name="p3">
+						<label for="r8">Moderado</label>
 					</li>
 					<li>
-						<input type="radio" id="r8" value="1" name="p3">
-						<label for="r8">Mucho</label>
+						<input type="radio" id="r9" value="1" name="p3">
+						<label for="r9">Mucho</label>
 					</li>					
 				</ul>
 			</div>
 		</div>
 		<div id="pregunta4" style="display: none;">
 			<!-- <h6>Seleccione al menos dos respuestas</h6> -->
-			<h3>¿Ha presentado fiebre? PENDIENTE</h3>
+			<h3>¿Ha presentado fiebre?</h3>
 			<div class="res">
 				<ul class="lista">
-					<li>
-						<input type="radio" id="r9" value="0" name="p4" checked>
-						<label for="r9">No</label>
+					<li id="h7">
+						<input type="radio" id="r10" value="0" name="p4" checked>
+						<label for="r10">No</label>
 					</li>
-					<li>
-						<input type="radio" id="r10" name="p4">
-						<label for="r10">Si (especificar onclick)</label>
-					</li>				
+					<li id="h8">
+						<input onclick="showHidden(3)" type="radio" id="r11" name="p4">
+						<label for="r11">Si</label>
+					</li>
+					<li id="h6" hidden>
+						<label>Especifica la temperatura en grados Celsius (36.5-39)</label>
+						<br>
+						<input name="p4" type="number" step="0.5" min="35.5" max="39"  id="hi3">
+						
+					</li>			
 				</ul>
 			</div>
 		</div>
@@ -117,16 +130,16 @@
 			<div class="res">
 				<ul class="lista">
 					<li>
-						<input type="radio" id="r11" value="0" name="p5" checked>
-						<label for="r11">No</label>
+						<input type="radio" id="r12" value="0" name="p5" checked>
+						<label for="r12">No</label>
 					</li>
 					<li>
-						<input type="radio" id="r12" value="0.5" name="p5">
-						<label for="r12">Mas o menos</label>
+						<input type="radio" id="r13" value="0.5" name="p5">
+						<label for="r13">Mas o menos</label>
 					</li>
 					<li>
-						<input type="radio" id="r13" value="0.8" name="p5">
-						<label for="r13">Si</label>
+						<input type="radio" id="r14" value="0.8" name="p5">
+						<label for="r14">Si</label>
 					</li>				
 				</ul>
 			</div>
@@ -137,16 +150,16 @@
 			<div class="res">
 				<ul class="lista">
 					<li>
-						<input type="radio" id="r14" value="0" name="p6" checked>
-						<label for="r14">No</label>
+						<input type="radio" id="r15" value="0" name="p6" checked>
+						<label for="r15">No</label>
 					</li>
 					<li>
-						<input type="radio" id="r15" value="0.6" name="p6">
-						<label for="r15">Moderado</label>
+						<input type="radio" id="r16" value="0.6" name="p6">
+						<label for="r16">Moderado</label>
 					</li>
 					<li>
-						<input type="radio" id="r16" value="1" name="p6">
-						<label for="r16">Si</label>
+						<input type="radio" id="r17" value="1" name="p6">
+						<label for="r17">Si</label>
 					</li>			
 				</ul>
 			</div>
@@ -157,20 +170,20 @@
 			<div class="res">
 				<ul class="lista">
 					<li>
-						<input type="radio" id="r21" value="0" name="p7" checked>
-						<label for="r21">No</label>
+						<input type="radio" id="r18" value="0" name="p7" checked>
+						<label for="r18">No</label>
 					</li>
 					<li>
-						<input type="radio" id="r22" value="0.3" name="p7">
-						<label for="r22">Leve</label>
+						<input type="radio" id="r19" value="0.3" name="p7">
+						<label for="r19">Leve</label>
 					</li>
 					<li>
-						<input type="radio" id="r231" value="0.6" name="p7">
-						<label for="r231">Moderado</label>
+						<input type="radio" id="r20" value="0.6" name="p7">
+						<label for="r20">Moderado</label>
 					</li>
 					<li>
-						<input type="radio" id="r23" value="0.8" name="p7">
-						<label for="r23">Intenso</label>
+						<input type="radio" id="r21" value="0.8" name="p7">
+						<label for="r21">Intenso</label>
 					</li>					
 				</ul>
 			</div>
@@ -181,16 +194,16 @@
 			<div class="res">
 				<ul class="lista">
 					<li>
-						<input type="radio" id="r24" value="0" name="p8" checked>
-						<label for="r24">No</label>
+						<input type="radio" id="r22" value="0" name="p8" checked>
+						<label for="r22">No</label>
 					</li>
 					<li>
-						<input type="radio" id="r25" value="0.5" name="p8">
-						<label for="r25">A veces</label>
+						<input type="radio" id="r23" value="0.5" name="p8">
+						<label for="r23">A veces</label>
 					</li>
 					<li>
-						<input type="radio" id="r26" value="1" name="p8">
-						<label for="r26">Todo el tiempo</label>
+						<input type="radio" id="r24" value="1" name="p8">
+						<label for="r24">Todo el tiempo</label>
 					</li>					
 				</ul>
 			</div>
@@ -201,12 +214,12 @@
 			<div class="res">
 				<ul class="lista">
 					<li>
-						<input type="radio" id="r27" value="0" name="p9" checked>
-						<label for="r27">No</label>
+						<input type="radio" id="r25" value="0" name="p9" checked>
+						<label for="r25">No</label>
 					</li>
 					<li>
-						<input type="radio" id="r29" value="1" name="p9">
-						<label for="r29">Sí</label>
+						<input type="radio" id="r26" value="1" name="p9">
+						<label for="r26">Sí</label>
 					</li>					
 				</ul>
 			</div>
@@ -217,12 +230,12 @@
 			<div class="res">
 				<ul class="lista">
 					<li>
-						<input type="radio" id="r30" value="0" name="p10" checked>
-						<label for="r30">No</label>
+						<input type="radio" id="r27" value="0" name="p10" checked>
+						<label for="r27">No</label>
 					</li>
 					<li>
-						<input type="radio" id="r32" value="1" name="p10">
-						<label for="r32">Sí</label>
+						<input type="radio" id="r28" value="1" name="p10">
+						<label for="r28">Sí</label>
 					</li>					
 				</ul>
 			</div>
@@ -233,16 +246,16 @@
 			<div class="res">
 				<ul class="lista">
 					<li>
-						<input type="radio" id="r33" value="0" name="p11" checked>
-						<label for="r33">No</label>
+						<input type="radio" id="r29" value="0" name="p11" checked>
+						<label for="r29">No</label>
 					</li>
 					<li>
-						<input type="radio" id="r34" value="0.5" name="p11">
-						<label for="r34">Mas o menos</label>
+						<input type="radio" id="r30" value="0.5" name="p11">
+						<label for="r30">Mas o menos</label>
 					</li>
 					<li>
-						<input type="radio" id="r35" value="1" name="p11">
-						<label for="r35">Sí</label>
+						<input type="radio" id="r31" value="1" name="p11">
+						<label for="r31">Sí</label>
 					</li>					
 				</ul>
 			</div>
@@ -253,16 +266,16 @@
 			<div class="res">
 				<ul class="lista">
 					<li>
-						<input type="radio" id="r36" value="0" name="p12" checked>
-						<label for="r36">No</label>
+						<input type="radio" id="r32" value="0" name="p12" checked>
+						<label for="r32">No</label>
 					</li>
 					<li>
-						<input type="radio" id="r37"  value="0.5" name="p12">
-						<label for="r37">A veces</label>
+						<input type="radio" id="r33"  value="0.5" name="p12">
+						<label for="r33">A veces</label>
 					</li>
 					<li>
-						<input type="radio" id="r38" value="1" name="p12">
-						<label for="r38">Sí</label>
+						<input type="radio" id="r34" value="1" name="p12">
+						<label for="r34">Sí</label>
 					</li>					
 				</ul>
 			</div>
@@ -273,44 +286,44 @@
             <div class="res">
                 <ul class="lista">
                     <li>
-                        <input type="radio" id="r39" value="0" name="p13" checked>
-                        <label for="r39">No</label>
+                        <input type="radio" id="r35" value="0" name="p13" checked>
+                        <label for="r35">No</label>
                     </li>
                     <li>
-                        <input type="radio" id="r40" value="0.2" name="p13" checked>
-                        <label for="r40">Leve</label>
+                        <input type="radio" id="r36" value="0.2" name="p13">
+                        <label for="r36">Leve</label>
                     </li>
                     <li>
-                        <input type="radio" id="r41" value="0.5" name="p13" checked>
-                        <label for="r41">Moderado</label>
+                        <input type="radio" id="r37" value="0.5" name="p13">
+                        <label for="r37">Moderado</label>
                     </li>
                     <li>
-                        <input type="radio" id="r42" value="0.8" name="p13" checked>
-                        <label for="r42">Intenso</label>
+                        <input type="radio" id="r38" value="0.8" name="p13">
+                        <label for="r38">Intenso</label>
                     </li>
                     <li>
-                        <input type="radio" id="r43" value="1" name="p13">
-                        <label for="r43">Insoportale</label>
+                        <input type="radio" id="r39" value="1" name="p13">
+                        <label for="r39">Insoportale</label>
                     </li>               
                 </ul>
             </div>
         </div>
         <div id="pregunta14" style="display: none;">
             <!-- <h6>Seleccione al menos dos respuestas</h6> -->
-            <h3>¿ ¿Ha presentado dolor de garganta?</h3>
+            <h3>¿Ha presentado dolor de garganta?</h3>
             <div class="res">
                 <ul class="lista">
                     <li>
-                        <input type="radio" id="r44" value="0" name="p14" checked>
-                        <label for="r44">No</label>
+                        <input type="radio" id="r40" value="0" name="p14" checked>
+                        <label for="r40">No</label>
                     </li>
                     <li>
-                        <input type="radio" id="r45" value="0.5" name="p14">
-                        <label for="r45">Moderado</label>
+                        <input type="radio" id="r41" value="0.5" name="p14">
+                        <label for="r41">Moderado</label>
                     </li>
                     <li>
-                        <input type="radio" id="r46" value="1" name="p14">
-                        <label for="r46">Intenso</label>
+                        <input type="radio" id="r42" value="1" name="p14">
+                        <label for="r42">Intenso</label>
                     </li>                   
                 </ul>
             </div>
@@ -321,12 +334,12 @@
             <div class="res">
                 <ul class="lista">
                     <li>
-                        <input type="radio" id="r47" value="0" name="p15" checked>
-                        <label for="r47">No</label>
+                        <input type="radio" id="r43" value="0" name="p15" checked>
+                        <label for="r43">No</label>
                     </li>
                     <li>
-                        <input type="radio" id="r48" value="1" name="p15">
-                        <label for="r48">Sí</label>
+                        <input type="radio" id="r44" value="1" name="p15">
+                        <label for="r44">Sí</label>
                     </li>                   
                 </ul>
             </div>
@@ -337,12 +350,12 @@
 			<div class="res">
 				<ul class="lista">
 					<li>
-						<input type="radio" id="r49" value="0" name="p16" checked>
-						<label for="r49">No</label>
+						<input type="radio" id="r45" value="0" name="p16" checked>
+						<label for="r45">No</label>
 					</li>
 					<li>
-						<input type="radio" id="r50" value="0.5" name="p16">
-						<label for="r50">Sí</label>
+						<input type="radio" id="r46" value="0.5" name="p16">
+						<label for="r46">Sí</label>
 					</li>					
 				</ul>
 			</div>
@@ -353,12 +366,12 @@
 			<div class="res">
 				<ul class="lista">
 					<li>
-						<input type="radio" id="r51" value="0" name="p17" checked>
-						<label for="r51">No</label>
+						<input type="radio" id="r47" value="0" name="p17" checked>
+						<label for="r47">No</label>
 					</li>
 					<li>
-						<input type="radio" id="r52" value="0.5" name="p17">
-						<label for="r52">Sí</label>
+						<input type="radio" id="r48" value="0.5" name="p17">
+						<label for="r48">Sí</label>
 					</li>				
 				</ul>
 			</div>
@@ -369,17 +382,17 @@
 			<div class="res">
 				<ul class="lista">
 					<li>
-						<input type="radio" id="r53" value="0" name="p18" checked>
-						<label for="r53">No</label>
+						<input type="radio" id="r49" value="0" name="p18" checked>
+						<label for="r49">No</label>
 					</li>
 					<li>
-						<input type="radio" id="r54" value="1" name="p18">
-						<label for="r54">Sí</label>
+						<input type="radio" id="r50" value="1" name="p18">
+						<label for="r50">Sí</label>
 					</li>					
 				</ul>
 			</div>
 		</div>
-		<a class="botonAnterior" onclick="getPreviousQuestion()" id="previous">Anterior</a>
+		<a class="botonAnterior" onclick="getPreviousQuestion()" id="previous">Atrás</a>
 		<a class="botonSiguiente" onclick="getNextQuestion()" id="next">Siguiente</a>
 	</div>
 

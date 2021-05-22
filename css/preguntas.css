@@ -6,7 +6,7 @@
 
 body {
 	/* background-color: #686de0; */
-	background-color: #262f38;
+	background-color: #1A7BAE;
 	font-family: 'Muli', sans-serif;
 	display: flex;
 	flex-direction: column;
@@ -28,6 +28,10 @@ body {
 	overflow: -moz-hidden-unscrollable;
 }
 
+#hi3 {
+	width: 200px;
+}
+
 ul{
 
 	text-align: left;
@@ -35,13 +39,29 @@ ul{
 	/* background-color: red; */
 }
 
+@font-face { font-family: Spring; src: url('../assets/lemon_friday/Spring Garden.ttf'); }
+@font-face { font-family: Rich; src: url('../assets/lemon_friday/Richela.otf'); }
+@font-face { font-family: tpw; src: url('../assets/lemon_friday/typew.otf'); }
+
+
 label{
 	font-size: 0.85em;
+	font-family: "tpw";
+	font-size: 25px;
+	/*letter-spacing: 2px;*/
 }
 
 h3 {
 	opacity: 0.6;
+	font-family: "tpw";
+	font-size: 25px;
 
+}
+
+h4 {
+	font-family: "tpw";
+	left: 5%;
+	font-size: 20px;
 }
 
 .res {
@@ -54,12 +74,13 @@ h3 {
 }
 
 .botonSiguiente {
-	background-color: #2a4764;
+	background-color: #3F9DB5;
+	font-family: "tpw";
+	font-size: 23px;
 	border: 0;
 	border-radius: 10px;
 	box-shadow: 0 5px 15px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.1);
 	color: #fff;
-	font-size: 16px;
 	padding: 14px 40px;
 	margin: 5px;
 }
@@ -73,7 +94,7 @@ h3 {
 }
 
 .botonSiguiente:hover{
-	background-color: #215992;
+	background-color: #3066BE;
 	cursor: pointer;
 }
 
@@ -81,11 +102,12 @@ h3 {
 .botonAnterior {
 	background-color: transparent;
 	border: 1px solid;
+	font-family: "tpw";
+	font-size: 23px;
 	border-radius: 10px;
-	border-color: #29324e;
+	border-color: #3F9DB5;
 	box-shadow: 0 5px 15px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.1);
 	color: rgb(36, 35, 51);
-	font-size: 16px;
 	padding: 13px 39px;
 	margin: 5px;
 }
@@ -99,7 +121,7 @@ h3 {
 }
 
 .botonAnterior:hover{
-	background-color: #215992;
+	background-color: #3066BE;
 	cursor: pointer;
 	color: white;
 	border: none;
@@ -110,12 +132,11 @@ h3 {
 
 
 
-
-
-
 h1 {
 	color: #273869;
 	font-size: 1.5em;
+	font-family: "tpw";
+	font-size: 30px;
   }
   
   .lista {
@@ -211,6 +232,7 @@ h1 {
 
   h6{
 	  color: silver;
+	  font-family: "tpw";
   }
 
 

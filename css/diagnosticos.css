@@ -3,7 +3,7 @@ html, body {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
-  background-color: #262f38;
+  background-color: #1A7BAE;
   font-family: 'Muli', sans-serif;
 }
 
@@ -13,39 +13,48 @@ html, body {
   box-sizing: border-box;
 }
 
+@font-face { font-family: Lemon; src: url('../assets/lemon_friday/Lemon Friday.ttf'); }
+@font-face { font-family: Spring; src: url('../assets/lemon_friday/Spring Garden.ttf'); }
+@font-face { font-family: tpw; src: url('../assets/lemon_friday/typew.otf'); }
+
+
 h1 {
-  color: #fff;
-  position: relative;
-  position: absolute;
-  left: 50%;
-  top: 20%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  white-space: nowrap;
-  letter-spacing: 1px;
+    color: black;
+    position: relative;
+    position: absolute;
+    left: 38%;
+    top: 2%;
+    font-size: 40px;
+    font-family: "Lemon";
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    letter-spacing: 1px;
 }
 
 h1:after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 4px;
-  left: 0;
-  bottom: -8px;
-  background: #fff;
-  transition: 500ms all ease-in-out;
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 4px;
+    left: 0;
+    bottom: -8px;
+    background: black;
+    transition: 500ms all ease-in-out;
 }
+
+
 
 a.opcion {
   display: block;
   position: absolute;
 	padding: 13px 39px;
   text-align: center;
+  font-family: "tpw";
   color: rgba(255, 255, 255, 1);
   background-color: rgba(41, 50, 78, 0.7);
   text-decoration: none;
   left: 50%;
-  bottom: 20%;
+  bottom: 10%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   font-size: 1.5em;
@@ -76,14 +85,14 @@ a.opcion:hover {
 }
 .contenedor .mitad.izquierda {
   left: 0;
-  background: url("../assets/left.jpg") center center no-repeat;
+  background: url("../assets/5781.jpg") center center no-repeat;
   background-size: cover;
 }
 .contenedor .mitad.izquierda:before {
   content: "";
   width: 100%;
   height: 100%;
-  background: rgba(255, 0, 120, 0.5);
+ /* background: rgba(255, 0, 120, 0.5);*/
   position: absolute;
 }
 .contenedor .mitad.derecha {
@@ -91,11 +100,11 @@ a.opcion:hover {
   background: url("../assets/right.jpg") center center no-repeat;
   background-size: cover;
 }
-.contenedor .mitad.derecha:before {
+/*.contenedor .mitad.derecha:before {
   content: "";
   width: 100%;
   height: 100%;
-  background: rgba(25, 120, 220, 0.5);
+  /*background: rgba(25, 120, 220, 0.5);
   position: absolute;
 }
 .contenedor .mitad.izquierda, .contenedor .mitad.derecha {
@@ -129,4 +138,4 @@ a.opcion:hover {
 .contenedor.derecha-is-hovered .izquierda:before {
   background: rgba(0, 0, 0, 0.65);
   z-index: 2;
-}
+}*/

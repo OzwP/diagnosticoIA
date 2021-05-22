@@ -4,9 +4,13 @@
 	box-sizing: border-box;
 }
 
+@font-face { font-family: tpw; src: url('../assets/lemon_friday/typew.otf'); }
+@font-face { font-family: Lemon; src: url('../assets/lemon_friday/Lemon Friday.ttf'); }
+
+
 body {
 	/* background-color: #686de0; */
-	background-color: #262f38;
+	background-color: #1A7BAE;
 	font-family: 'Muli', sans-serif;
 	display: flex;
 	flex-direction: column;
@@ -30,11 +34,21 @@ body {
 
 h2{
 	font-size: 1.3em;
+	font-family: "tpw";
+	font-size: 25px;
+	margin: 5px;
+}
+
+h1 {
+	font-family: "Lemon";
+	font-size: 30px;
+	margin: 5px
 }
 
 h3 {
 	opacity: 0.5;
 	margin: 0;
+	font-family: "tpw";
 }
 
 .res {
@@ -46,13 +60,14 @@ h3 {
 }
 
 .botonSiguiente {
-	background-color: #2a4764;
+	background-color: #3F9DB5;
 	border: 0;
 	border-radius: 10px;
 	box-shadow: 0 5px 15px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.1);
 	color: #fff;
-	font-size: 24px;
+	font-size: 30px;
 	padding: 21px 60px;
+	font-family: "tpw";
 }
 
 .botonSiguiente:active {
@@ -64,12 +79,12 @@ h3 {
 }
 
 .botonSiguiente:hover{
-	background-color: #215992;
+	background-color: #3066BE;
 	cursor: pointer;
 }
 
 
 img{
-	width: 80px;
-	height: 80px;
+	width: 200px;
+	height: 160px;
 }

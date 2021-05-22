@@ -130,12 +130,35 @@ function fillProgress(counter){
 }
 
 function getSelectedValue(counter){
+    console.log(counter)
     let radioButtons = document.getElementsByName(`p${counter}`);
     for(button of radioButtons){
         if(button.checked){
-            localStorage.setItem(`p${counter}`, button.value);
+            if (counter === 4) {
+                temp = document.getElementById('hi3').value
+                if (temp === null) {
+                    temp = 0
+                } else if (temp >= 38.5) {
+                    temp = 1
+                } else if (temp >= 38) {
+                    temp = 0.8
+                } else if (temp >= 37.5) {
+                    temp = 0.5
+                } else if (temp >= 37) {
+                    temp = 0.2
+                } else if (temp <= 36.5) {
+                    temp = 0
+                }
+                console.log(temp)
+                localStorage.setItem(`p${counter}`, temp);
+            } else {
+                console.log(button.value)
+                localStorage.setItem(`p${counter}`, button.value);    
+            }
+            
         }
     }
+
 }
 
 function getUsersAnswers() {
@@ -154,16 +177,16 @@ function results(){
 
     if(localStorage.getItem('flag') === 'true'){
         let selectedIllness = localStorage.getItem('selectedIllness').split(',');
-        answer = specificDiagnosis(symptoms, selectedIllness);
+        answer = diagnosticoEsp(symptoms, selectedIllness);
     } else {
-        answer = generalDiagnosis(symptoms);
+        answer = diagnosticoGnrl(symptoms);
     }
 
     for(let i = 0; i < Object.keys(answer).length; i++){
         if(i === 2) return
 
         title.innerHTML = `${answer[`illness${i}`].name}`;
-        text.innerHTML = `<h4>Origen</h4>${answer[`illness${i}`].source}<h4>Recomendaciones</h4>${answer[`illness${i}`].recommendations}`
+        text.innerHTML = `<h4>Descripción de la enfermedad</h4>${answer[`illness${i}`].source}<h4>Tratamiento</h4>${answer[`illness${i}`].recommendations}`
     }
 }
 
@@ -171,6 +194,25 @@ function noBack(){
     history.pushState(null, null, location.href);
     window.onpopstate = function () {
         history.go(1);
+    }
+}
+
+function showHidden(menu) {
+    if (menu === 1) {
+        document.getElementById('r3').checked = false;
+        document.getElementById('h3').hidden = true;
+        document.getElementById('h2').hidden = true;
+        document.getElementById('h4').hidden = false;
+        document.getElementById('h5').hidden = false;
+    } else if (menu === 2) {
+        document.getElementById('h3').hidden = false;
+        document.getElementById('h2').hidden = false;
+        document.getElementById('h4').hidden = true;
+        document.getElementById('h5').hidden = true;
+    } else if (menu === 3) {
+        document.getElementById('h6').hidden = false;
+        document.getElementById('h7').hidden = true;
+        document.getElementById('h8').hidden = true;
     }
 }
 
